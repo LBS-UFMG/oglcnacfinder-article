@@ -118,7 +118,7 @@ ROWS = [
     (C, 'PTG-PLM', '2022', 'Alkuhlani et al., Axioms 11(9):469', '10.3390/axioms11090469', 'N-glycosylation + lysine glycation only', 'UniProt (N-gly), PredGly (K-gly)',
      'CNN on PLM embeddings', 'none', '-', 'https://github.com/Alhasanalkuhlani/PTG-PLM', 'up (last push 2022-09)', 'full text + live check', 'no O-linked model'),
     (C, 'DAPPLE 2', '2016', 'Trost et al., J Proteome Res 15:2760-2767', '10.1021/acs.jproteome.6b00304', 'homology transfer of known sites (20 PTM types)', '15 PTM databases',
-     'homology-based', 'http://saphire.usask.ca/saphire/dapple2', 'timed out', 'none', '-', 'abstract + live check', 'does not predict new sites'),
+     'homology-based', 'http://saphire.usask.ca/saphire/dapple2', 'timed out', 'none', '-', 'abstract + live check', 'only transfers known sites to homologous positions'),
     (C, 'Gana & Vasudevan', '2019', 'BMC Mol Cell Biol 20:21', '10.1186/s12860-019-0200-9', 'O-GlcNAc vs N-glycosylation (negatives)', 'dbOGAP + PhosphoSitePlus with PDB structures',
      'ridge-regression linear probability model (explanatory)', 'none', '-', 'data: Additional file 1 (glycos_public.xlsx)', 'not checked', 'PDF', 'not a released tool'),
     # --- D. named only ---
@@ -128,10 +128,21 @@ ROWS = [
     (D, "Sasaki et al. SVM tool", '', 'not recorded', '', 'O-glycosylation', '', 'SVM', '', '', '', '', 'named in GlycoMine', 'EXCLUDED 2026-10-12: N- and O-glycosylation from Swiss-Prot, no tool; probable paper doi 10.2197/ipsjtbio.2.25 (IPSJ Trans Bioinform 2009)'),
 ]
 
-bad = [r[1] for r in ROWS if len(r) != len(COLUMNS) - 2]
+
+# Rows added 2026-10-29 from the Google Scholar paper set (user), listed after the sorted rows as #41-46
+ADDED = [
+    (A, 'OGTcomPred', '2023', 'Chong PA, Nosella ML, Vanama M, Ruiz-Arduengo R, Forman-Kay JD. Exploration of O-GlcNAc transferase glycosylation sites reveals a target sequence compositional bias. J Biol Chem 2023;299(5):104629', '10.1016/j.jbc.2023.104629', 'O-GlcNAc (OGT substrates)', 'positives: 1,829 39-residue peptides from PhosphoSitePlus O-GlcNAc sites; negatives: 135 peptides from 5 disordered proteins not glycosylated by OGT in vitro', 'position-specific composition scoring matrix (38 positions x 18 amino acids) over 39 residues, multiplied by a 0/1 disorder flag', '-', '-', 'Zenodo 10.5281/zenodo.6986306 (OGTcomPred.pl, runamatrix, datasets)', 'downloaded 2026-10-29 (other_tools/ogtcompred/download/)', 'found 2026-10-29 in the Google Scholar paper set (user)', 'NOT BENCHMARKED (decided 2026-10-29, user): the script requires a per-protein disorder prediction file ("SpotD"). The authors do not specify which disorder predictor they used (paper: "a disorder predictor"; README and script: "SpotD"/"SpotD disorder prediction"); we assumed some version of SPOT-Disorder. The SPOT-Disorder downloads (SPOT-Disorder, SPOT-Disorder2, SPOT-Disorder-Single) were unavailable on 2026-10-29 and no mirror was found, so the required input could not be produced and the tool was not run.'),
+    (C, 'DeepGly', '2019', 'Chen J, Yang R, Zhang C, Zhang L, Zhang Q. DeepGly: a deep learning framework with recurrent and convolutional neural networks to identify protein glycation sites from imbalanced data. IEEE Access 2019;7:142368-78', '10.1109/ACCESS.2019.2944411', 'lysine glycation (non-enzymatic), not glycosylation', '', '', '', '', '', '', 'found 2026-10-29 in the Google Scholar paper set (user)', 'EXCLUDED 2026-10-29 (user): predicts lysine glycation, not O-GlcNAc (paper abstract)'),
+    (C, 'DictyOGlyc 1.1', '1999', 'Gupta R, Jung E, Gooley AA, Williams KL, Brunak S, Hansen J. Scanning the available Dictyostelium discoideum proteome for O-linked GlcNAc glycosylation sites using neural networks. Glycobiology 1999;9(10):1009-22', '10.1093/glycob/9.10.1009', 'O-alpha-GlcNAc, secreted and membrane proteins of Dictyostelium discoideum', '', '', '', '', '', '', 'found 2026-10-29 in the Google Scholar paper set (user)', 'EXCLUDED 2026-10-29 (user): predicts O-alpha-GlcNAc on secreted/membrane Dictyostelium proteins (39 training sites), not nuclear/cytosolic O-beta-GlcNAc (paper abstract and introduction); used as a comparator by Hong et al. 2025'),
+    (B, 'iGlycoS-PseAAC', '2021', "Akmal MA, Hussain W, Rasool N, Khan YD, Khan SA, Chou KC. Using Chou's 5-steps rule to predict O-linked serine glycosylation sites by blending position relative features and statistical moment. IEEE/ACM Trans Comput Biol Bioinform 2021;18(5):2045-56", '', 'O-linked glycosylation on serine (UniProt; GalNAc in index terms)', '', '', '', '', '', '', 'found 2026-10-29 in the Google Scholar paper set (user)', 'EXCLUDED 2026-10-29 (user): generic O-linked serine glycosylation from UniProt, no O-GlcNAc-specific output (paper)'),
+    (B, 'O-GlyThr', '2023', 'Tang H, Tang Q, Zhang Q, Feng P. O-GlyThr: Prediction of human O-linked threonine glycosites using multi-feature fusion. Int J Biol Macromol 2023;242:124761', '10.1016/j.ijbiomac.2023.124761', 'human O-linked glycosylation on threonine (UniProt), glycan type not separated', '', '', '', '', '', '', 'found 2026-10-29 in the Google Scholar paper set (user)', 'EXCLUDED 2026-10-29 (user): generic human O-linked threonine glycosylation from UniProt, no O-GlcNAc-specific output (paper); server http://cbcb.cdutcm.edu.cn/O-GlyThr/ not checked'),
+    (A, 'Arcanjo et al. (2025)', '2025', 'Arcanjo A, Mariano D, Bastos LL, Bastos ALA, Pirovani M, de Melo-Minardi RC. Using Protein Language Models Embeddings to predict O-GlcNAc glycosylation sites. Anais do XVIII Simposio Brasileiro de Bioinformatica (BSB 2025), pp. 198-209', '10.5753/bsb.2025.15151', 'O-GlcNAc', 'O-GlcNAc Atlas (training and validation splits, 4,100 proteins)', 'ESM-2 embeddings + classifier', '', '', '', '', '', 'INCLUDED (user, 2026-10-29): our earlier model; benchmarked in NB11; counted among the 17 dedicated predictors'),
+]
+
+bad = [r[1] for r in ROWS + ADDED if len(r) != len(COLUMNS) - 2]
 assert not bad, f'wrong number of fields: {bad}'
 ordered = sorted(ROWS, key=lambda r: (-int(r[2]) if r[2] else 1, r[0], r[1].lower()))  # newest first; no year last; then group, tool
-rows = [[i + 1, *r, ''] for i, r in enumerate(ordered)]
+rows = [[i + 1, *r, ''] for i, r in enumerate(ordered + ADDED)]
 with open(HERE / 'competitor_table.csv', 'w', newline='', encoding='utf-8-sig') as f:  # utf-8-sig: opens correctly in Excel
     w = csv.writer(f)
     w.writerow(COLUMNS)

@@ -73,7 +73,7 @@ ROWS = {
                  'Predicts generic human O-linked glycosylation on threonine, no O-GlcNAc-specific output.'),
     'PTG-PLM': (None, None, None, 'No', 'No', 'Predicts N-glycosylation and lysine glycation only, no O-linked model.'),
     'Gana & Vasudevan': ('Gana and Vasudevan', None, None, 'No', 'No', 'Analysis study, no predictor released.'),
-    'DAPPLE 2': (None, None, None, 'No', 'No', 'Transfers known sites between homologs, does not predict new sites.'),
+    'DAPPLE 2': (None, None, None, 'No', 'No', 'Transfers known sites to homologous positions in other organisms, so it cannot predict sites without a known homologous site.'),
     'NetOGlyc-4.0': (None, None, None, 'No', 'No',
                      'Predicts mucin-type O-GalNAc glycosylation. O-GlcNAc sites were deliberately excluded from its '
                      'training data.'),

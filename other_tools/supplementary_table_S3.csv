@@ -36,7 +36,7 @@ EnsembleGly,2007,10.1186/1471-2105-8-438,Multi-PTM or generic glycosylation pred
 PTG-PLM,2022,10.3390/axioms11090469,Other modification or not a site predictor,No,No,"Predicts N-glycosylation and lysine glycation only, no O-linked model."
 DeepGly,2019,10.1109/ACCESS.2019.2944411,Other modification or not a site predictor,No,No,"Predicts lysine glycation, not glycosylation."
 Gana and Vasudevan,2019,10.1186/s12860-019-0200-9,Other modification or not a site predictor,No,No,"Analysis study, no predictor released."
-DAPPLE 2,2016,10.1021/acs.jproteome.6b00304,Other modification or not a site predictor,No,No,"Transfers known sites between homologs, does not predict new sites."
+DAPPLE 2,2016,10.1021/acs.jproteome.6b00304,Other modification or not a site predictor,No,No,"Transfers known sites to homologous positions in other organisms, so it cannot predict sites without a known homologous site."
 NetOGlyc-4.0,2013,10.1038/emboj.2013.79,Other modification or not a site predictor,No,No,Predicts mucin-type O-GalNAc glycosylation. O-GlcNAc sites were deliberately excluded from its training data.
 GlycoPP,2012,10.1371/journal.pone.0040155,Other modification or not a site predictor,No,No,"Predicts glycosylation of prokaryotic proteins only (pooled O-linked class), not eukaryotic O-GlcNAc."
 CKSAAP_OGlySite,2008,10.1186/1471-2105-9-101,Other modification or not a site predictor,No,No,"Predicts mucin-type O-GalNAc glycosylation in mammalian proteins, not O-GlcNAc."
