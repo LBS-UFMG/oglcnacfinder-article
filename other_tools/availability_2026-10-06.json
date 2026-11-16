@@ -1,0 +1,100 @@
+{
+ "servers": {
+  "YinOYang 1.2": {
+   "url": "https://services.healthtech.dtu.dk/services/YinOYang-1.2/",
+   "status": 200,
+   "final_url": "https://services.healthtech.dtu.dk/services/YinOYang-1.2/",
+   "title": "YinOYang 1.2 - DTU Health Tech - Bioinformatic Services"
+  },
+  "OGTSite": {
+   "url": "http://csb.cse.yzu.edu.tw/OGTSite/",
+   "status": "unreachable",
+   "error": "<urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou "
+  },
+  "O-GlcNAcPRED-II": {
+   "url": "http://121.42.167.206/OGlcPred/",
+   "status": "unreachable",
+   "error": "<urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou "
+  },
+  "PTM-ssMP": {
+   "url": "http://bioinformatics.ustc.edu.cn/PTM-ssMP/index/",
+   "status": "unreachable",
+   "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  "LM-OGlcNAc-Site (server)": {
+   "url": "http://kcdukkalab.org/LMOGlcNAcSite",
+   "status": "unreachable",
+   "error": "<urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou "
+  },
+  "DeepO-GlcNAc": {
+   "url": "http://124.220.189.245:8000/",
+   "status": "unreachable",
+   "error": "<urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou "
+  },
+  "O-GlcNAcPRED-DL": {
+   "url": "https://oglcnac.org/pred_dl/",
+   "status": 200,
+   "final_url": "https://oglcnac.org/pred_dl/",
+   "title": "O-GlcNAcPRED-DL | oglcnac.org"
+  },
+  "Khalid et al. (Kaggle data)": {
+   "url": "https://www.kaggle.com/datasets/esm2oglcnac/o-glcnac-prediction-model",
+   "status": 200,
+   "final_url": "https://www.kaggle.com/datasets/esm2oglcnac/o-glcnac-prediction-model",
+   "title": "O-GlcNAc Prediction model | Kaggle"
+  }
+ },
+ "repos": {
+  "LM-OGlcNAc-Site": {
+   "repo": "KCLabMTU/LM-OGlcNAc-Site",
+   "exists": true,
+   "pushed_at": "2024-06-28",
+   "archived": false,
+   "stars": 1
+  },
+  "Stack-OglyPred-PLM": {
+   "repo": "PakhrinLab/Stack-OglyPred-PLM",
+   "exists": true,
+   "pushed_at": "2024-09-25",
+   "archived": false,
+   "stars": 1
+  },
+  "O-GlcNAc spatial env (Hong et al. 2025)": {
+   "repo": "pseokyoung/o-glcnac-prediction",
+   "exists": true,
+   "pushed_at": "2025-03-18",
+   "archived": false,
+   "stars": 1
+  }
+ },
+ "github_search": {
+  "O-GlcNAcylation RNN Seber": [],
+  "oglcnac rnn": [],
+  "DeepO-GlcNAc": [
+   [
+    "seniorpigeon/DeepO-GlcNAc",
+    null
+   ],
+   [
+    "Drtindg/DeepO-GlcNAc",
+    null
+   ]
+  ],
+  "O-GlcNAcPRED-DL": [
+   [
+    "hufengzhu/O-GlcNAcPRED-DL-master",
+    null
+   ]
+  ],
+  "OGlcNAc prediction": [
+   [
+    "oglcnac/oglcnac-source",
+    "Source monorepo for oglcnac.org frontend and prediction backend"
+   ],
+   [
+    "pseokyoung/oglcnac-site-prediction-feature-selection",
+    "Predicting O-GlcNAcylated sites using SRNN and augmented features"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,34 @@
+notebook,step,seconds,hardware,proteins,source,flops,st_sites,training_seconds,date,windows,hours
+NB01,"MMseqs2 all-vs-all alignment (7,363 proteins)",5866.1,"Colab, 2 CPU cores",7363.0,"NB01 output (MMseqs2 ""Time for processing"")",,,,,,1.6294722222222224
+NB02,ESM2-8M per-residue embeddings,72.0,NVIDIA A100-SXM4-80GB,,data_processed/embeddings/ESM2-8M/residues.json,178874617996144.0,,,,,0.02
+NB02,ESM2-35M per-residue embeddings,126.0,NVIDIA A100-SXM4-80GB,,data_processed/embeddings/ESM2-35M/residues.json,720039137747496.0,,,,,0.035
+NB02,ESM2-150M per-residue embeddings,282.0,NVIDIA A100-SXM4-80GB,,data_processed/embeddings/ESM2-150M/residues.json,3011515003713248.0,,,,,0.07833333333333334
+NB02,ESM2-650M per-residue embeddings,804.0,NVIDIA A100-SXM4-80GB,,data_processed/embeddings/ESM2-650M/residues.json,1.196325356212256e+16,,,,,0.22333333333333333
+NB02,ESM2-8M classifier features,36.0,not recorded,,data_processed/features/ESM2-8M/features.json,,960772.0,,,,0.01
+NB02,ESM2-35M classifier features,54.0,not recorded,,data_processed/features/ESM2-35M/features.json,,960772.0,,,,0.015
+NB02,ESM2-150M classifier features,108.0,not recorded,,data_processed/features/ESM2-150M/features.json,,960772.0,,,,0.03
+NB02,ESM2-650M classifier features,372.0,not recorded,,data_processed/features/ESM2-650M/features.json,,960772.0,,,,0.10333333333333333
+NB03,"pilot, ESM2-8M +-15 (20 configurations)",516.0,NVIDIA A100-SXM4-80GB,,data_processed/training/ESM2-8M/pm15/done.json,,,,,,0.14333333333333334
+NB03,"pilot, learning-rate test",2418.0000000000005,NVIDIA A100-SXM4-80GB,,data_processed/training/lr_test/ESM2-8M/pm15/done.json,,,,,,0.6716666666666667
+NB03,"grid: 28 (pLM, window) pairs x 18 configurations = 504 runs",26574.000000000004,NVIDIA A100-SXM4-80GB,,data_processed/training/grid/*/*/done.json,,,23634.0,,,7.381666666666668
+NB03,"grid_h512: 28 (pLM, window) pairs x 6 configurations = 168 runs",6480.0,NVIDIA A100-SXM4-80GB,,data_processed/training/grid_h512/*/*/done.json,,,5543.999999999999,,,1.8
+NB05,external_proteins,168.7,NVIDIA A100-SXM4-80GB,3176.0,results/compute/NB05_external_proteins.json,,507762.0,,2026-10-28,,0.04686111111111111
+NB05,test_proteins,35.6,NVIDIA A100-SXM4-80GB,736.0,results/compute/NB05_test_proteins.json,,94380.0,,2026-10-28,,0.00988888888888889
+NB07,external_Fu_2026,119.7,NVIDIA A100-SXM4-80GB,437.0,results/compute/NB07_external_Fu_2026.json,,70740.0,,2026-10-28,,0.03325
+NB07,external_HCC_liver_2026,67.5,NVIDIA A100-SXM4-80GB,196.0,results/compute/NB07_external_HCC_liver_2026.json,,38732.0,,2026-10-28,,0.01875
+NB07,external_Lei_2025,336.4,NVIDIA A100-SXM4-80GB,1308.0,results/compute/NB07_external_Lei_2025.json,,201641.0,,2026-10-28,,0.09344444444444444
+NB07,external_Mouse_brain_2025,263.5,NVIDIA A100-SXM4-80GB,878.0,results/compute/NB07_external_Mouse_brain_2025.json,,151718.0,,2026-10-28,,0.07319444444444445
+NB07,external_NOTISE_2026,190.3,NVIDIA A100-SXM4-80GB,679.0,results/compute/NB07_external_NOTISE_2026.json,,113259.0,,2026-10-28,,0.052861111111111116
+NB07,test_human,157.1,NVIDIA A100-SXM4-80GB,736.0,results/compute/NB07_test_human.json,,93161.0,,2026-10-28,,0.04363888888888889
+NB07,test_mouse,163.5,NVIDIA A100-SXM4-80GB,736.0,results/compute/NB07_test_mouse.json,,93161.0,,2026-10-28,,0.04541666666666667
+NB08,external_rnn225,302.6,NVIDIA A100-SXM4-80GB,3176.0,results/compute/NB08_external_rnn225.json,,507762.0,,2026-10-28,,0.08405555555555556
+NB08,external_rnn600_75,303.4,NVIDIA A100-SXM4-80GB,3176.0,results/compute/NB08_external_rnn600_75.json,,507762.0,,2026-10-28,,0.08427777777777777
+NB08,test_rnn225,59.0,NVIDIA A100-SXM4-80GB,736.0,results/compute/NB08_test_rnn225.json,,93161.0,,2026-10-28,,0.01638888888888889
+NB08,test_rnn600_75,59.1,NVIDIA A100-SXM4-80GB,736.0,results/compute/NB08_test_rnn600_75.json,,93161.0,,2026-10-28,,0.016416666666666666
+NB10,test,448.1,NVIDIA A100-SXM4-80GB,736.0,results/compute/NB10_test.json,,93161.0,,2026-10-28,,0.12447222222222223
+NB14,proteome_arabidopsis,512.2,NVIDIA A100-SXM4-40GB,27489.0,results/compute/NB14_proteome_arabidopsis.json,,1578375.0,,2026-11-02,,0.14227777777777778
+NB14,proteome_fly,368.0,NVIDIA A100-SXM4-40GB,13807.0,results/compute/NB14_proteome_fly.json,,1038959.0,,2026-11-02,,0.10222222222222223
+NB14,proteome_human,571.5,NVIDIA A100-SXM4-40GB,20642.0,results/compute/NB14_proteome_human.json,,1573898.0,,2026-11-03,,0.15875
+NB14,proteome_mouse,577.4,NVIDIA A100-SXM4-40GB,21848.0,results/compute/NB14_proteome_mouse.json,,1652528.0,,2026-11-02,,0.1603888888888889
+NB14,proteome_rice,623.0,NVIDIA A100-SXM4-40GB,43594.0,results/compute/NB14_proteome_rice.json,,1728136.0,,2026-11-02,,0.17305555555555555
+LM script,"LM-OGlcNAc-Site, external sets (three pLMs + networks)",139168.0,NVIDIA A100 80GB PCIe,,"external_run.log (final progress line), external_provenance.json",,,,2026-10-21,162490.0,38.65777777777778

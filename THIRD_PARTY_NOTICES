@@ -1,0 +1,23 @@
+Third-party code
+
+This repository does not include code of the predictors it compares. Each is cloned from its
+repository at the commit used in the study, by the script that runs it:
+
+  Predictor            Repository                                        Commit    License   Used by
+  LM-OGlcNAc-Site      github.com/KCLabMTU/LM-OGlcNAc-Site               ff032df   none      analysis/06, scripts/lm_oglcnac_site_external
+  O-GlcNAcPRED-DL      github.com/hufengzhu/O-GlcNAcPRED-DL-master       2e953b3   MIT       analysis/07
+  RNN-[600,75]         github.com/PedroSeber/O-GlcNAcylation_Prediction  8d97344   MIT       analysis/08
+  RNN-225              github.com/PedroSeber/O-GlcNAcylation_Prediction  b5629d5   MIT       analysis/08
+  Stack-OglyPred-PLM   github.com/PakhrinLab/Stack-OglyPred-PLM          f9934d2   none      analysis/10, scripts/stack_oglypred_plm_long_proteins
+  Arcanjo et al. 2025  github.com/LBS-UFMG/OGlcNAc                       c1d6d35   (our laboratory)  analysis/11
+
+O-GlcNAcPRED-DL: analysis/07 changes some lines of the cloned files at run time (each change tagged
+[modified] / [removed] in the files it writes). RNN-225 and RNN-[600,75]: run unchanged.
+
+LM-OGlcNAc-Site and Stack-OglyPred-PLM have no license, so the scripts that run their code with our
+changes are kept here as templates (*.template.py), in which every line taken from those repositories
+is a reference to its file and line. third_party/assemble.py clones both repositories at the commits
+above and writes the runnable scripts, checked to be identical to the scripts that were run.
+
+YinOYang 1.2 (DTU Health Tech): analysis/09 prepares submission files for its web server; the
+submissions failed, so it was not compared. No code is used.

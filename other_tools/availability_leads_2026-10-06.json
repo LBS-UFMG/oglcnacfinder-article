@@ -1,0 +1,77 @@
+{
+ "servers": {
+  "GlycoMine (paper URL)": {
+   "url": "http://www.structbioinfor.org/Lab/GlycoMine/",
+   "status": "unreachable",
+   "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  "GlycoMine-struct (paper URL)": {
+   "url": "http://glycomine.erc.monash.edu/Lab/GlycoMine_Struct/",
+   "status": "unreachable",
+   "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  "GlycoEP (paper URL)": {
+   "url": "http://www.imtech.res.in/raghava/glycoep/",
+   "status": "unreachable",
+   "error": "<urlopen error no host given>"
+  },
+  "DAPPLE 2 (paper URL)": {
+   "url": "http://saphire.usask.ca/saphire/dapple2",
+   "status": "unreachable",
+   "error": "<urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou "
+  },
+  "NetOGlyc-4.0 (paper URL)": {
+   "url": "http://www.cbs.dtu.dk/services/NetOGlyc-4.0/",
+   "status": "unreachable",
+   "error": "timed out"
+  },
+  "Mauri et al. 2021 OGP (GitLab)": {
+   "url": "https://gitlab.in2p3.fr/cmsb-public/OGP",
+   "status": "unreachable",
+   "error": "<urlopen error [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou "
+  }
+ },
+ "repos": {
+  "PTG-PLM": {
+   "repo": "Alhasanalkuhlani/PTG-PLM",
+   "exists": true,
+   "pushed_at": "2022-09-14",
+   "archived": false,
+   "description": null,
+   "top_level": [
+    "CNNModel.py",
+    "CNN_config.ini",
+    "Embedding.py",
+    "ExtractPeptide.py",
+    "Features",
+    "LICENSE.txt",
+    "ML.py",
+    "README.md",
+    "SplitDataset.py",
+    "datasets",
+    "gpu.py",
+    "gpu_test.py",
+    "models",
+    "predict.py",
+    "requirements.txt",
+    "results",
+    "save embedding features.py",
+    "train.py"
+   ]
+  },
+  "Captor (Zhu et al. 2021)": {
+   "repo": "YanZhu06/Captor",
+   "exists": true,
+   "pushed_at": "2021-08-09",
+   "archived": false,
+   "description": null,
+   "top_level": [
+    "Code",
+    "Data",
+    "Feature",
+    "Last_feature",
+    "README.md"
+   ]
+  }
+ }
+}
