@@ -1,0 +1,10 @@
+{
+ "notebook": "NB14",
+ "step": "proteome_fly",
+ "seconds": 368.0,
+ "proteins": 13807,
+ "st_sites": 1038959,
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "cpu_cores": 12,
+ "date": "2026-11-03"
+}

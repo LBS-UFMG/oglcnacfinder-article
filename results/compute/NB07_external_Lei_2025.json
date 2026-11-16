@@ -1,0 +1,10 @@
+{
+ "notebook": "NB07",
+ "step": "external_Lei_2025",
+ "seconds": 336.4,
+ "proteins": 1308,
+ "st_sites": 201641,
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "cpu_cores": 12,
+ "date": "2026-10-28"
+}

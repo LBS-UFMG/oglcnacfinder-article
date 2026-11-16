@@ -1,0 +1,10 @@
+{
+ "notebook": "NB07",
+ "step": "external_HCC_liver_2026",
+ "seconds": 67.5,
+ "proteins": 196,
+ "st_sites": 38732,
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "cpu_cores": 12,
+ "date": "2026-10-28"
+}

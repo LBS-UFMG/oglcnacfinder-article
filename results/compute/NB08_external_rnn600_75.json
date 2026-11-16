@@ -1,0 +1,10 @@
+{
+ "notebook": "NB08",
+ "step": "external_rnn600_75",
+ "seconds": 303.4,
+ "proteins": 3176,
+ "st_sites": 507762,
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "cpu_cores": 12,
+ "date": "2026-10-28"
+}

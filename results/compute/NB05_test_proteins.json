@@ -1,0 +1,10 @@
+{
+ "notebook": "NB05",
+ "step": "test_proteins",
+ "seconds": 35.6,
+ "proteins": 736,
+ "st_sites": 94380,
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "cpu_cores": 12,
+ "date": "2026-10-28"
+}
