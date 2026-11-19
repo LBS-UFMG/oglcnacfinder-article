@@ -8,13 +8,14 @@ and tables of the article. Laboratory of Bioinformatics and Systems (LBS), UFMG.
   [LBS-UFMG/oglcnacfinder](https://github.com/LBS-UFMG/oglcnacfinder)
 - Web server: <https://bioinfo.dcc.ufmg.br/oglcnacfinder/>
 - Article: *to be added at publication*
-- Data (Zenodo): *DOI to be added at publication*
+- Data (Zenodo): <https://doi.org/10.5281/zenodo.24379893>
+- This code (Zenodo): <https://doi.org/10.5281/zenodo.24378941>; the tool: <https://doi.org/10.5281/zenodo.24378501>
 
 ## Contents
 
 | Folder | Content |
 |---|---|
-| `analysis/` | the 18 analysis scripts, run in order (below) |
+| `analysis/` | the 19 analysis scripts, run in order (below), and `ldb3_conservation/` (alignment of the LDB3 case study) |
 | `scripts/` | two scripts run outside Colab, on a GPU or CPU server, for the long runs of two predictors |
 | `other_tools/` | search for published O-GlcNAc predictors and builders of Supplementary Tables S3, S4, S6 and S7 |
 | `figures/` | sources of Figure 1 (draw.io) and of the Figure 12 screenshots |
@@ -70,6 +71,7 @@ Times and hardware are those recorded by the scripts (Supplementary Table S9).
 | `16_tool_reproducibility.py` | check of the O-GlcNAcFinder package against the proteome predictions | GPU (the package) |
 | `17_website_data.py` | data files of the web server's proteome browser | CPU |
 | `18_literature_search.py` | PubMed records per year (Supplementary Figure S2) | CPU |
+| `19_zenodo_record.py` | builds the Zenodo data record: one zip per group of files, manifest and checksums, README | CPU |
 
 `scripts/lm_oglcnac_site_external.py` (LM-OGlcNAc-Site on the external studies, 38.7 h on an A100)
 and `scripts/stack_oglypred_plm_long_proteins.py` (Stack-OglyPred-PLM on proteins too long for the
