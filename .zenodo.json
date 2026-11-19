@@ -1,0 +1,43 @@
+{
+  "title": "O-GlcNAcFinder: analysis code of the article",
+  "upload_type": "software",
+  "description": "Code of every step of the study that built and evaluated O-GlcNAcFinder, from the download of the data to the figures and tables of the article.",
+  "creators": [
+    {
+      "name": "Arcanjo, Adenilson",
+      "affiliation": "Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE); Universidade Federal de Minas Gerais (UFMG)",
+      "orcid": "0000-0002-9674-1342"
+    },
+    {
+      "name": "da Silva, Leonardo Henrique",
+      "affiliation": "Universidade Federal de Minas Gerais (UFMG)",
+      "orcid": "0000-0003-2341-5906"
+    },
+    {
+      "name": "de Sousa, Fernanda Coura Pena",
+      "affiliation": "Universidade Federal de Minas Gerais (UFMG)",
+      "orcid": "0009-0001-1374-9382"
+    },
+    {
+      "name": "de Melo-Minardi, Raquel C.",
+      "affiliation": "Universidade Federal de Minas Gerais (UFMG)",
+      "orcid": "0000-0001-5190-100X"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "O-GlcNAc",
+    "O-GlcNAcylation",
+    "post-translational modification",
+    "protein language model",
+    "ESM-2",
+    "site prediction"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/LBS-UFMG/oglcnacfinder",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
