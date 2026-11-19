@@ -96,6 +96,12 @@ reference to its file and line, and our changes are tagged `[modified]`, `[added
 references and checks that each assembled script is identical (SHA-256) to the script that was run.
 The other predictors are cloned and run by the scripts; see `THIRD_PARTY_NOTICES`.
 
+## Funding
+
+This work was supported by the Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG) and the
+Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq). This study was financed in part by the
+Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – Brasil (CAPES) – Finance Code 001.
+
 ## License
 
 MIT license, following the LBS Software Policy (<https://bioinfo.dcc.ufmg.br/software-policy>); see
